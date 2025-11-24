@@ -10,8 +10,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 </head>
 
-<body>
-    <div class="conteiner card m-4" style="width: 800px;">
+<body class="d-flex justify-content-center">
+    <div class="conteiner card m-4 " style="width: 800px;">
 
         <div class="card-header text-body-secondary bg-body-secondary d-flex fs-2">
             <h1>Payment form example</h1>
@@ -23,12 +23,15 @@
         </div>
 
 
-        <div class=" card-body">
+        <div class=" card-body p-0 m-0">
 
-            <form action="" class="row g-3 p-2 pb-0">
+            <form action="" class="row g-3 p-2 pb-0 needs-validation">
                 <div class="col-md-5">
                     <label for="inputCard" class="form-label">Card #</label>
                     <input type="number" class="form-control" id="inputCard" placeholder="XXXXXX" required>
+                    <div class="invalid-feedback">
+                        Please provide a valid number card.
+                    </div>
 
                 </div>
                 <div class="col-md-4">
@@ -37,18 +40,18 @@
                 </div>
                 <div class="col-md-3 d-flex align-items-end">
                     <i class="fa-solid fa-euro-sign pb-2 "></i>
-                    <div class="col-md-11">
+                    <div class="">
                         <label for="inputAmount" class="form-label">Amount</label>
                         <input type="number" class="form-control" id="inputAmount" placeholder="Amount" required>
                     </div>
 
                 </div>
 
-                <div class="col-6">
+                <div class="col-md-6">
                     <label for="inputName" class="form-label">First Name</label>
                     <input type="text" class="form-control" id="inputName" required>
                 </div>
-                <div class="col-6">
+                <div class="col-md-6">
                     <label for="inputLastName" class="form-label">Last Name</label>
                     <input type="text" class="form-control" id="inputLastName" required>
                 </div>
@@ -77,8 +80,8 @@
 
 
                 <div class="col-md-6">
-                    <p>we accpet:</p>
-                    <div class="col-md-7 bg-secondary d-flex justify-content-center rounded ">
+                    <p>We accept:</p>
+                    <div class="col-md-7 bg-secondary d-flex justify-content-center rounded g-1 ">
                         <div class="form-check form-check-inline m-1">
                             <input class="form-check-input" type="radio" id="Checkbox1" value="Mastercerd"
                                 name="inlineRadioOptions">
@@ -115,16 +118,17 @@
                     <p class="text-secundary">Add any note here.</p>
 
                 </div>
+                <div class="card-footer text-body-secondary bg-body-secondary g-2">
+                    <div class="d-flex justify-content-end">
+                        <button class="btn btn-secondary m-2" type="button">Cancel</button>
+                        <button class="btn btn-primary m-2" type="submit">Send</button>
+                    </div>
+
+                </div>
 
             </form>
         </div>
-        <div class="card-footer text-body-secondary bg-body-secondary">
-            <div class="d-flex justify-content-end">
-                <button class="btn btn-secondary me-md-2" type="button">Cancel</button>
-                <button class="btn btn-primary" type="submit">Send</button>
-            </div>
 
-        </div>
 
 
 
@@ -138,6 +142,27 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
+    <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (() => {
+            'use strict'
+
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            const forms = document.querySelectorAll('.needs-validation')
+
+            // Loop over them and prevent submission
+            Array.from(forms).forEach(form => {
+                form.addEventListener('submit', event => {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+
+                    form.classList.add('was-validated')
+                }, false)
+            })
+        })()
+    </script>
 </body>
 
 </html>

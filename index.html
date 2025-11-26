@@ -18,114 +18,115 @@
         </div>
 
 
-        <div class="alert alert-danger m-2 fs-5">
+        <div class="alert alert-danger m-2 fs-5 d-block">
             <h5>Some fields are missing</h5>
         </div>
 
 
         <div class=" card-body p-0 m-0">
+            <fieldset>
+                <form class="row g-3 p-2 pb-0 needs-validation">
+                    <div class="col-md-5">
+                        <label for="inputCard" class="form-label">Card #</label>
+                        <input type="number" class="form-control" id="inputCard" placeholder="XXXXXX" required>
+                        <div class="invalid-feedback">
+                            Please provide a valid number card.
+                        </div>
 
-            <form action="" class="row g-3 p-2 pb-0 needs-validation">
-                <div class="col-md-5">
-                    <label for="inputCard" class="form-label">Card #</label>
-                    <input type="number" class="form-control" id="inputCard" placeholder="XXXXXX" required>
-                    <div class="invalid-feedback">
-                        Please provide a valid number card.
                     </div>
-
-                </div>
-                <div class="col-md-4">
-                    <label for="inputCvc" class="form-label">CVC #</label>
-                    <input type="number" class="form-control" id="inputCvc" placeholder="0000" required>
-                </div>
-                <div class="col-md-3 d-flex align-items-end">
-                    <i class="fa-solid fa-euro-sign pb-2 "></i>
-                    <div class="">
+                    <div class="col-md-4">
+                        <label for="inputCvc" class="form-label">CVC #</label>
+                        <input type="number" class="form-control" id="inputCvc" placeholder="0000" required>
+                    </div>
+                    <div class="col-12 col-md-3 ">
                         <label for="inputAmount" class="form-label">Amount</label>
-                        <input type="number" class="form-control" id="inputAmount" placeholder="Amount" required>
-                    </div>
-
-                </div>
-
-                <div class="col-md-6">
-                    <label for="inputName" class="form-label">First Name</label>
-                    <input type="text" class="form-control" id="inputName" required>
-                </div>
-                <div class="col-md-6">
-                    <label for="inputLastName" class="form-label">Last Name</label>
-                    <input type="text" class="form-control" id="inputLastName" required>
-                </div>
-
-
-                <div class="col-md-6">
-                    <label for="inputCity" class="form-label">City</label>
-                    <input type="text" id="inputCity" class="form-control" required>
-
-                </div>
-                <div class="col-md-3">
-                    <label for="inputState" class="form-label">State</label>
-                    <select id="inpuntState" class="form-control">
-                        <option value="" selected>Pick a State</option>
-                        <option value="">New York</option>
-                        <option value="">California</option>
-                        <option value="">Texas</option>
-                    </select>
-
-                </div>
-
-                <div class="col-md-3">
-                    <label for="inputPostalCode" class="form-label">Postal Code</label>
-                    <input type="text" class="form-control" id="inputPostalCode" required>
-                </div>
-
-
-                <div class="col-md-6">
-                    <p>We accept:</p>
-                    <div class="col-md-7 bg-secondary d-flex justify-content-center rounded g-1 ">
-                        <div class="form-check form-check-inline m-1">
-                            <input class="form-check-input" type="radio" id="Checkbox1" value="Mastercerd"
-                                name="inlineRadioOptions">
-                            <label class="form-check-label" for="Checkbox1">
-                                <i class="fa-brands fa-cc-mastercard fa-lg" style="color: #fcfcfc;"></i>
-                            </label>
-                        </div>
-                        <div class="form-check form-check-inline m-1">
-                            <input class="form-check-input" type="radio" id="Checkbox2" value="option2"
-                                name="inlineRadioOptions">
-                            <label class="form-check-label" for="Checkbox2">
-                                <i class="fa-brands fa-cc-visa" style="color: #ffffff;"></i>
-                            </label>
-                        </div>
-                        <div class="form-check form-check-inline m-1">
-                            <input class="form-check-input" type="radio" id="Checkbox3" value="option3"
-                                name="inlineRadioOptions">
-                            <label class="form-check-label" for="Checkbox3">
-                                <i class="fa-brands fa-cc-diners-club" style="color: #ffffff;"></i>
-                            </label>
-                        </div>
-                        <div class="form-check form-check-inline m-1">
-                            <input class="form-check-input" type="radio" id="Checkbox4" value="option3"
-                                name="inlineRadioOptions">
-                            <label class="form-check-label" for="Checkbox4">
-                                <i class="fa-brands fa-cc-amex" style="color: #ffffff;"></i>
-                            </label>
+                        <div class="input-group">
+                            <div class="input-group-text">
+                                €
+                            </div>
+                            <input type="number" class="form-control" id="inputAmount" placeholder="Amount" required>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-6">
-                    <label class="form-label" for="Message">Message</label>
-                    <textarea class="form-control" id="Message" rows="3"></textarea>
-                    <p class="text-secundary">Add any note here.</p>
 
-                </div>
-                <div class="card-footer text-body-secondary bg-body-secondary g-2">
-                    <div class="d-flex justify-content-end">
-                        <button class="btn btn-secondary m-2" type="button">Cancel</button>
-                        <button class="btn btn-primary m-2" type="submit">Send</button>
+                    <div class="col-md-6">
+                        <label for="inputName" class="form-label">First Name</label>
+                        <input type="text" class="form-control" id="inputName" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="inputLastName" class="form-label">Last Name</label>
+                        <input type="text" class="form-control" id="inputLastName" required>
                     </div>
 
-                </div>
 
+                    <div class="col-md-6">
+                        <label for="inputCity" class="form-label">City</label>
+                        <input type="text" id="inputCity" class="form-control" required>
+
+                    </div>
+                    <div class="col-md-3">
+                        <label for="inputState" class="form-label">State</label>
+                        <select id="inpuntState" class="form-control">
+                            <option value="" selected>Pick a State</option>
+                            <option value="">New York</option>
+                            <option value="">California</option>
+                            <option value="">Texas</option>
+                        </select>
+
+                    </div>
+
+                    <div class="col-md-3">
+                        <label for="inputPostalCode" class="form-label">Postal Code</label>
+                        <input type="text" class="form-control" id="inputPostalCode" required>
+                    </div>
+
+
+                    <div class="col-md-6">
+                        <p>We accept:</p>
+                        <div class="col-md-7 bg-secondary d-flex justify-content-center rounded g-1 ">
+                            <div class="form-check form-check-inline m-1">
+                                <input class="form-check-input" type="radio" id="Checkbox1" value="Mastercerd"
+                                    name="inlineRadioOptions">
+                                <label class="form-check-label" for="Checkbox1">
+                                    <i class="fa-brands fa-cc-mastercard fa-lg" style="color: #fcfcfc;"></i>
+                                </label>
+                            </div>
+                            <div class="form-check form-check-inline m-1">
+                                <input class="form-check-input" type="radio" id="Checkbox2" value="visa"
+                                    name="inlineRadioOptions">
+                                <label class="form-check-label" for="Checkbox2">
+                                    <i class="fa-brands fa-cc-visa" style="color: #ffffff;"></i>
+                                </label>
+                            </div>
+                            <div class="form-check form-check-inline m-1">
+                                <input class="form-check-input" type="radio" id="Checkbox3" value="diners"
+                                    name="inlineRadioOptions">
+                                <label class="form-check-label" for="Checkbox3">
+                                    <i class="fa-brands fa-cc-diners-club" style="color: #ffffff;"></i>
+                                </label>
+                            </div>
+                            <div class="form-check form-check-inline m-1">
+                                <input class="form-check-input" type="radio" id="Checkbox4" value="amex"
+                                    name="inlineRadioOptions">
+                                <label class="form-check-label" for="Checkbox4">
+                                    <i class="fa-brands fa-cc-amex" style="color: #ffffff;"></i>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label" for="Message">Message</label>
+                        <textarea class="form-control" id="Message" rows="3"></textarea>
+                        <p class="text-secundary">Add any note here.</p>
+
+                    </div>
+                    <div class="card-footer text-body-secondary bg-body-secondary g-2">
+                        <div class="d-flex justify-content-end">
+                            <button class="btn btn-secondary m-2" type="reset">Cancel</button>
+                            <button class="btn btn-primary m-2" type="submit">Send</button>
+                        </div>
+
+                    </div>
+            </fieldset>
             </form>
         </div>
 
